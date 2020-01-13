@@ -1,8 +1,8 @@
 <?php
 	require "Connection.php";
 	#campos mandados desde app
-	$HoraInicial = 14:50;
-	$HoraFinal = 15:50;
+	$HoraInicial = time();
+	$HoraFinal = time()+7;
 	$Ubicacion = "Por alla";
 	$Mascota = 1;
 	$User = "0931657365";

@@ -4,9 +4,9 @@
 	$idVeterinaria = 1;
 	$idVacuna = 1;
 	$idMascota = 1;
-	$idDoctor = 1;
+	$idDoctor = "1201511712";
 	$fecha = 24-01-2020;
-	$hora = 13:50;
+	$hora = time()+15;
 	
 	$mysql_qry = "insert into citavacuna (IDVeterinaria,IDVacuna,IDMascota,
 	IDDoctor,Fecha,Hora) values (

@@ -1,7 +1,7 @@
 <?php
 	require "Connection.php";
 	
-	$campoSel = "especiemascota";//mandado desde app
+	$campoSel = "raza";//mandado desde app
 	
 	$mysql_qry = "select * from $campoSel";
 	$result = mysqli_query($conn,$mysql_qry);
