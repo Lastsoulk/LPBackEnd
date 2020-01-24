@@ -1,19 +1,18 @@
 <?php
 	require "Connection.php";
 	#campos mandados desde app
-	$HoraInicial = time();
-	$HoraFinal = time()+7;
-	$Ubicacion = "Por alla";
-	$Mascota = 1;
-	$User = "0931657365";
-
+	$mascota = $_POST["mascota"];
+	$usuario = $_POST["usuario"];
+	$fecha = $_POST["fecha"];
+	$hora = $_POST["hora"];
+	$ubicacion = $_POST["ubicacion"];
 	
-	$mysql_qry = "insert into salidas (HoraInicial,HoraFinal,Ubicacion,
-	Mascota,User) values (
-		'$HoraInicial','$HoraFinal','$Ubicacion','$Mascota','$User')";
+	$mysql_qry = "insert into salidas (mascota,usuario,fecha,
+	hora,ubicacion) values (
+		'$mascota','$usuario',$fecha,'$hora','$ubicacion')";
 	$result = mysqli_query($conn,$mysql_qry);
 	if($conn->query($mysql_qry)=== TRUE){
-		echo "Insertar exitoso";
+		echo "Salida planificada";
 	}else{
 		echo "Error: ". $mysql_qry ."<br>" . $conn->error;
 	}

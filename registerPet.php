@@ -1,15 +1,15 @@
 <?php
 	require "Connection.php";
 	#campos mandados desde app
-	$nombre = "HolaKheAze";
-	$edad = 14;
-	$especie = 1;
-	$raza = 1;
-	$genero = "Macho";
+	$nombre = $_POST["petname"];
+	$edad = $_POST["edad"];
+	$especie = $_POST["especie"];
+	$raza = $_POST["raza"];
+	$genero = $_POST["genero"];
 	$foto = "no hay foto :c";
-	$user = "0931657365";
+	$user = $_POST["user_name"];
 	
-	$mysql_qry = "insert into mascota (Nombre,Edad,Especie,Raza,Genero,Foto,User) values (
+	$mysql_qry = "insert into mascota (Nombre,Edad,Especie,Raza,Genero,Foto,usuario) values (
 		'$nombre','$edad','$especie','$raza','$genero','$foto','$user')";
 	$result = mysqli_query($conn,$mysql_qry);
 	if($conn->query($mysql_qry)=== TRUE){
