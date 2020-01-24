@@ -13,7 +13,7 @@
 	$result = mysqli_query($conn,$mysql_qry);
 	if($conn->query($mysql_qry)=== TRUE){
 		echo "Registro exitoso";
-	}else{
+	}if($conn->query($mysql_qry)=== FALSE){
 		echo "Error: ". $mysql_qry ."<br>" . $conn->error;
 	}
 	$conn->close();
